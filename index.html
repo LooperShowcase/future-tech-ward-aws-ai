@@ -1,0 +1,40 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <link
+      href="https://fonts.googleapis.com/css?family=Varela Round"
+      rel="stylesheet" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <link rel="stylesheet" href="style.css" />
+    <link rel="icon" href="Capture.PNG" type="image/x-icon" />
+    <title>Ward's Voice Assistant</title>
+  </head>
+  <body>
+    <div class="background"></div>
+    <div class="container">
+      <div class="chat-box" id="chat-box">
+        <div class="message assistant-msg">
+          How can infintea help You today ?
+        </div>
+      </div>
+      <div class="user-input">
+        <input type="text" id="user-input" placeholder="Ask me something..." />
+
+        <button
+          id="send-btn"
+          onclick="
+                      event.preventDefault();
+            conversationUserAdd(document.getElementById('user-input').value);
+            openai_test();
+        ">
+          Send
+        </button>
+        <button id="send-speech">🗣</button>
+      </div>
+
+      <div id="chat-container"></div>
+    </div>
+    <script src="script.js" defer></script>
+  </body>
+</html>
